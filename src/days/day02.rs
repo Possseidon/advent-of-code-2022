@@ -19,6 +19,7 @@ pub fn part2(input: String) -> u32 {
         })
         .sum()
 }
+
 #[derive(Clone, Copy)]
 enum Hand {
     Rock,
