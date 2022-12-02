@@ -57,6 +57,8 @@ fn get_solver(puzzle: u32, part2: bool) -> Option<Solver> {
     match (puzzle, part2) {
         (1, false) => Some(days::day1::part1),
         (1, true) => Some(days::day1::part2),
+        (2, false) => Some(days::day2::part1),
+        (2, true) => Some(days::day2::part2),
         _ => None,
     }
 }
