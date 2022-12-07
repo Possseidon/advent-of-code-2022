@@ -1,6 +1,6 @@
 use itertools::Itertools;
 
-pub fn part1(input: String) -> u32 {
+pub fn part1(input: String) -> String {
     input
         .lines()
         .map(|rucksack| {
@@ -12,10 +12,11 @@ pub fn part1(input: String) -> u32 {
                     .unwrap(),
             )
         })
-        .sum()
+        .sum::<u32>()
+        .to_string()
 }
 
-pub fn part2(input: String) -> u32 {
+pub fn part2(input: String) -> String {
     input
         .lines()
         .chunks(3)
@@ -29,7 +30,8 @@ pub fn part2(input: String) -> u32 {
                     .unwrap(),
             )
         })
-        .sum()
+        .sum::<u32>()
+        .to_string()
 }
 
 fn item_priority(item: char) -> u32 {

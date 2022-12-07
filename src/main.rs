@@ -51,7 +51,7 @@ fn main() {
     println!("Solution:\n{solution}");
 }
 
-type Solver = fn(String) -> u32;
+type Solver = fn(String) -> String;
 
 fn get_solver(puzzle: u32, part2: bool) -> Option<Solver> {
     match (puzzle, part2) {

@@ -1,4 +1,4 @@
-pub fn part1(input: String) -> u32 {
+pub fn part1(input: String) -> String {
     input
         .lines()
         .map(|line| {
@@ -6,10 +6,11 @@ pub fn part1(input: String) -> u32 {
             let outcome = outcome(opponent, myself);
             myself.score() + outcome.score()
         })
-        .sum()
+        .sum::<u32>()
+        .to_string()
 }
 
-pub fn part2(input: String) -> u32 {
+pub fn part2(input: String) -> String {
     input
         .lines()
         .map(|line| {
@@ -17,7 +18,8 @@ pub fn part2(input: String) -> u32 {
             let myself = opponent.hand_to_get(outcome);
             myself.score() + outcome.score()
         })
-        .sum()
+        .sum::<u32>()
+        .to_string()
 }
 
 #[derive(Clone, Copy)]
